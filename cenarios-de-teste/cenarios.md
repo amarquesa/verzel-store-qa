@@ -112,4 +112,16 @@
 
 **Status:** Aberto
 
+**Validação complementar:** Ao aumentar o subtotal para R$ 250,00, o sistema concedeu corretamente o frete grátis.
+
+**Conclusão:** O defeito foi reproduzido no valor exato de R$ 200,00, enquanto o cenário de R$ 250,00 funcionou conforme esperado.
+
+**Possível causa:** Utilização de uma comparação estrita (`> 200`) em vez de inclusiva (`>= 200`) na regra de frete grátis.
+
+**Status do CT06:** REPROVADO — BUG-001.
+
+**Evidências:**
+- `evidencias/CT06-frete-gratis-200.png`
+- `evidencias/CT06-frete-gratis-250.png`
+
 **Evidência:** `evidencias/CT06-frete-gratis-200.png`
