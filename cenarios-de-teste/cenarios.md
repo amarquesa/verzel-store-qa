@@ -86,3 +86,30 @@
 **Conclusão:** A restrição de um cupom por vez foi observada. A substituição por outro cupom válido permanece pendente por falta de massa de teste.
 
 **Conclusão:** Comportamento conforme o critério de aceitação CA04.
+
+# BUG-001 — Frete grátis não aplicado ao atingir R$ 200,00
+
+**Data:** 07/10/2026
+
+**Critério de aceitação:** CA06
+
+**Caso de teste:** CT06
+
+**Severidade sugerida:** Alta
+
+**Descrição:** Ao atingir o subtotal de R$ 200,00, o sistema continua cobrando R$ 19,90 de frete, contrariando a regra de frete grátis para compras a partir de R$ 200,00.
+
+**Pré-condições:** Carrinho com produtos e sem cupom aplicado.
+
+**Passos para reprodução:**
+1. Adicionar 4 unidades da Garrafa Térmica 750ml, no valor de R$ 50,00 cada.
+2. Acessar o carrinho.
+3. Verificar o subtotal, o frete e o total do pedido.
+
+**Resultado esperado:** Frete grátis (R$ 0,00) e total de R$ 200,00.
+
+**Resultado obtido:** Frete de R$ 19,90 e total de R$ 219,90. O sistema ainda apresenta a mensagem "Faltam R$ 0,00 para o frete grátis".
+
+**Status:** Aberto
+
+**Evidência:** `evidencias/CT06-frete-gratis-200.png`
