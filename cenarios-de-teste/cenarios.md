@@ -50,3 +50,21 @@
 **Conclusão:** Comportamento conforme o critério de aceitação CA03.
 
 **Conclusão:** Comportamento conforme o critério de aceitação CA02.
+
+### CT04 — Validar cupom expirado
+
+**Data:** 07/10/2026
+
+**Critério de aceitação:** CA04
+
+**Status:** APROVADO
+
+**Cupom utilizado:** VERAO2026 — expirado em 31/03/2026.
+
+**Resultado esperado:** O sistema deverá apresentar a mensagem "Cupom expirado." e não aplicar desconto.
+
+**Resultado obtido:** O sistema identificou corretamente o cupom expirado, exibindo a mensagem "Cupom expirado.". O desconto permaneceu em R$ 0,00, com subtotal de R$ 100,00, frete de R$ 19,90 e total de R$ 119,90.
+
+**Evidência:** `evidencias/CT04-cupom-expirado.png`
+
+**Conclusão:** Comportamento conforme o critério de aceitação CA04.
