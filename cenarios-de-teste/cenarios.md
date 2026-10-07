@@ -67,4 +67,22 @@
 
 **Evidência:** `evidencias/CT04-cupom-expirado.png`
 
+### CT05 — Validar substituição de cupom aplicado
+
+**Data:** 07/10/2026
+
+**Critério de aceitação:** CA05
+
+**Status:** PARCIALMENTE EXECUTADO
+
+**Resultado esperado:** O sistema deve permitir apenas um cupom por vez. Para substituir o cupom atual, o cliente deverá removê-lo e aplicar outro cupom válido.
+
+**Resultado obtido:** Foi confirmado que, após aplicar o cupom BEMVINDO10, o sistema apresenta apenas a opção "Remover cupom", sem disponibilizar um campo para aplicar outro simultaneamente.
+
+**Limitação:** A documentação disponibiliza apenas dois cupons: BEMVINDO10 (válido) e VERAO2026 (expirado). Portanto, não foi possível validar a substituição por outro cupom válido.
+
+**Evidência:** `evidencias/CT05-substituicao-cupom.png`
+
+**Conclusão:** A restrição de um cupom por vez foi observada. A substituição por outro cupom válido permanece pendente por falta de massa de teste.
+
 **Conclusão:** Comportamento conforme o critério de aceitação CA04.
