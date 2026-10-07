@@ -13,3 +13,22 @@
 **Evidência:** `evidencias/CT01-cupom-bemvindo10.png`
 
 **Conclusão:** Comportamento conforme o critério de aceitação CA01.
+
+### CT02 — Validar letras maiúsculas, minúsculas e espaços no cupom
+
+**Data:** 07/10/2026
+
+**Critério de aceitação:** CA02
+
+**Status:** APROVADO
+
+**Resultado esperado:** O sistema deve aceitar o cupom independentemente de letras maiúsculas, minúsculas e espaços no início ou no final.
+
+**Resultado obtido:** O sistema reconheceu as três variações testadas, padronizando a exibição do cupom para BEMVINDO10 e aplicando corretamente o desconto de R$ 10,00 sobre o subtotal de R$ 100,00.
+
+**Evidências:**
+- `evidencias/CT02-cupom-letras-minúsculas.png`
+- `evidencias/CT02-cupom-espaços.png`
+- `evidencias/CT02-cupom-letrasmaiúsculas-minúsculas.png`
+
+**Conclusão:** Comportamento conforme o critério de aceitação CA02.
