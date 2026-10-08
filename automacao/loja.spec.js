@@ -27,7 +27,7 @@ test('CT11 - Validar cálculo e arredondamento', async ({ request }) => {
     }
   );
 
-  expect([400, 422]).toContain(resposta.status());
+  expect(resposta.status()).toBe(200);
 
   const dados = await resposta.json();
 
