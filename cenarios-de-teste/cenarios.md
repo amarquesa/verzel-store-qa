@@ -186,3 +186,24 @@
 **Conclusão:** Falha de validação no backend. É necessário aplicar o limite de 5 unidades também nos endpoints da API.
 
 **Conclusão:** Comportamento conforme o critério de aceitação CA07.
+
+### CT11 – Validação de arredondamento dos valores
+
+**Objetivo:** Validar o cálculo do subtotal, desconto de 10%, frete e valor total do carrinho.
+
+**Resultado esperado:** Os valores devem ser calculados corretamente, respeitando duas casas decimais na interface.
+
+**Resultado obtido:** Teste aprovado. A interface e a API apresentaram valores equivalentes:
+
+- Subtotal: R$ 179,70
+- Desconto: R$ 17,97
+- Frete: R$ 19,90
+- Total: R$ 181,63
+
+**Status:** Aprovado ✅
+
+**Evidências:**
+- `CT11-arredondamento-interface.png`
+- `CT11-arredondamento-api.png`
+
+**Observação:** A API retornou status 200 OK. Os valores numéricos sem zero à direita são válidos em JSON e não representam erro de arredondamento.
