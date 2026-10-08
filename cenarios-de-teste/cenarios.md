@@ -154,4 +154,18 @@
 
 **Conclusão:** Comportamento conforme o esperado.
 
+### CT09 — Validar que o desconto não incide sobre o frete
+
+**Data:** 07/10/2026
+
+**Status:** APROVADO
+
+**Resultado esperado:** O desconto de 10% deve incidir somente sobre o subtotal dos produtos, mantendo o valor integral do frete.
+
+**Resultado obtido:** Com subtotal de R$ 100,00, o cupom BEMVINDO10 aplicou R$ 10,00 de desconto. O frete permaneceu em R$ 19,90, resultando no total de R$ 109,90.
+
+**Evidência:** `evidencias/CT09-desconto-nao-incide-frete.png`
+
+**Conclusão:** Comportamento conforme o critério de aceitação CA09.
+
 **Conclusão:** Comportamento conforme o critério de aceitação CA07.
