@@ -168,4 +168,21 @@
 
 **Conclusão:** Comportamento conforme o critério de aceitação CA09.
 
+### CT10 — Validar limite máximo de 5 unidades por produto
+
+**Data:** 07/10/2026
+
+**Status:** REPROVADO — BUG IDENTIFICADO
+
+**Resultado esperado:** O sistema deve impedir quantidades superiores a 5 unidades por produto, tanto na interface quanto na API.
+
+**Resultado obtido:** A interface respeitou o limite de 5 unidades. Entretanto, as APIs `/api/carrinho/calcular` e `/api/pedidos` aceitaram requisições com 10 unidades do mesmo produto, retornando HTTP 200 e 201, respectivamente.
+
+**Evidências:**
+- `evidencias/CT10-limite-5-unidades-interface.png`
+- `evidencias/CT10-bug-limite-api-pedidos.png`
+- `evidencias/CT10-bug-limite-api-carrinho.png`
+
+**Conclusão:** Falha de validação no backend. É necessário aplicar o limite de 5 unidades também nos endpoints da API.
+
 **Conclusão:** Comportamento conforme o critério de aceitação CA07.
