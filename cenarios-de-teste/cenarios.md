@@ -140,4 +140,18 @@
 
 **Evidência:** `evidencias/CT07-frete-abaixo-200.png`
 
+### CT08 — Validar cálculo do frete antes do desconto
+
+**Data:** 07/10/2026
+
+**Status:** APROVADO
+
+**Resultado esperado:** O frete grátis deve considerar o subtotal antes da aplicação do cupom.
+
+**Resultado obtido:** Com subtotal de R$ 219,70, o cupom BEMVINDO10 aplicou desconto de R$ 21,97, resultando em R$ 197,73. O frete permaneceu grátis, conforme a regra CA08.
+
+**Evidência:** `evidencias/CT08-frete-abaixo-limite-apos-desconto.png`
+
+**Conclusão:** Comportamento conforme o esperado.
+
 **Conclusão:** Comportamento conforme o critério de aceitação CA07.
