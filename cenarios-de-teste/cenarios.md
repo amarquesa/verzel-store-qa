@@ -206,4 +206,26 @@
 - `CT11-arredondamento-interface.png`
 - `CT11-arredondamento-api.png`
 
+### CT12 – Validação de e-mail inválido
+
+**Pré-condições:**
+- Produto adicionado ao carrinho.
+- Acesso à tela de finalização da compra.
+
+**Passos para execução:**
+1. Acessar a tela de finalização da compra.
+2. Informar um e-mail inválido (`@gmail.com`).
+3. Verificar a validação apresentada pelo sistema.
+
+**Resultado esperado:**
+O sistema deve identificar o formato inválido do e-mail e apresentar uma mensagem de validação.
+
+**Resultado obtido:**
+O sistema exibiu corretamente a mensagem "Informe um e-mail válido".
+
+**Status:** APROVADO
+
+**Evidências:**
+- `CT13-validacao-email-invalido.png`
+
 **Observação:** A API retornou status 200 OK. Os valores numéricos sem zero à direita são válidos em JSON e não representam erro de arredondamento.
