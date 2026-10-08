@@ -36,17 +36,22 @@ Foram implementados três testes de API:
 | CT11 | Cálculo e arredondamento | Retornar os valores esperados |
 | CT12 | Validação de e-mail inválido | Rejeitar dados inválidos |
 
-## Defeito identificado
 
-**BUG-01 — API permite quantidade superior ao limite de 5 unidades.**
+## Defeitos identificados
 
-Durante os testes, foi identificada uma inconsistência entre a interface e o backend.
+Durante os testes, foram identificados dois defeitos:
 
-A interface impede quantidades superiores a 5 unidades por produto, enquanto as APIs testadas aceitaram requisições contendo 10 unidades.
+**BUG-01 — API permite quantidade superior ao limite de 5 unidades (CT10).**
 
-O CT10 foi configurado para validar a regra esperada. Sua falha na automação evidencia o comportamento divergente da API.
+A interface respeita o limite de 5 unidades por produto, porém os endpoints de carrinho e pedidos aceitam requisições com 10 unidades.
 
-Os detalhes de reprodução e os resultados observados estão documentados em `bugs.md`.
+**BUG-02 — Frete grátis não aplicado exatamente em R$ 200,00 (CT06).**
+
+Ao atingir subtotal de R$ 200,00, o sistema mantém a cobrança de R$ 19,90 de frete, contrariando a regra de negócio.
+
+Os passos para reprodução, resultados e evidências estão documentados no [relatório de bugs](bugs.md).
+
+O [relatório de evidências](cenarios-de-teste/evidencias/README.md) reúne os 12 cenários, seus resultados e os respectivos registros de execução.
 
 ## Como executar os testes
 
@@ -88,7 +93,3 @@ As evidências das execuções estão disponíveis em `automacao/evidencias/`.
 
 O projeto reúne cenários de teste, evidências, documentação de defeitos e automação, com foco na rastreabilidade dos resultados e na identificação de problemas que possam afetar as regras de negócio da aplicação.
 
-- JavaScript
-- Playwright
-- Node.js
-- GitHub Codespaces
