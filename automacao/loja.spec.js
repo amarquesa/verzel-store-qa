@@ -1,7 +1,7 @@
 
 const { test, expect } = require('@playwright/test');
 
-test('CT10 - API aceita quantidade superior a 5', async ({ request }) => {
+test('CT10 - API deve bloquear quantidade superior a 5', async ({ request }) => {
   const resposta = await request.post(
     'https://verzel-store.qa-test-verzel-store.workers.dev/api/carrinho/calcular',
     {
@@ -11,7 +11,7 @@ test('CT10 - API aceita quantidade superior a 5', async ({ request }) => {
     }
   );
 
-  expect(resposta.status()).toBe(200);
+  expect([400, 422]).toContain(resposta.status());
   const dados = await resposta.json();
   expect(dados).toBeDefined();
 });
@@ -27,7 +27,7 @@ test('CT11 - Validar cálculo e arredondamento', async ({ request }) => {
     }
   );
 
-  expect(resposta.status()).toBe(200);
+  expect([400, 422]).toContain(resposta.status());
 
   const dados = await resposta.json();
 
