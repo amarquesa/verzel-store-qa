@@ -125,3 +125,19 @@
 - `evidencias/CT06-frete-gratis-250.png`
 
 **Evidência:** `evidencias/CT06-frete-gratis-200.png`
+
+### CT07 — Validar frete fixo abaixo de R$ 200,00
+
+**Data:** 07/10/2026
+
+**Critério de aceitação:** CA07
+
+**Status:** APROVADO
+
+**Resultado esperado:** Para compras com subtotal inferior a R$ 200,00, o sistema deve cobrar frete fixo de R$ 19,90 e informar o valor restante para atingir o frete grátis.
+
+**Resultado obtido:** Com subtotal de R$ 150,00, o sistema cobrou corretamente R$ 19,90 de frete, totalizando R$ 169,90. Também apresentou a mensagem "Faltam R$ 50,00 para o frete grátis".
+
+**Evidência:** `evidencias/CT07-frete-abaixo-200.png`
+
+**Conclusão:** Comportamento conforme o critério de aceitação CA07.
